@@ -6,6 +6,7 @@
 	</head>
 	
 	<body>
+	
 	<!-- Heading Tags -->
 	<h1>HTML</h1>
 	<h2>HTML</h2>
@@ -13,6 +14,7 @@
 	<h4>HTML</h4>
 	<h5>HTML</h5>
 	<h6>HTML</h6>
+	
 	
 	<!-- Paragraph Tag -->
 	<p>
@@ -44,12 +46,14 @@
 		translation by H. Rackham.
 	</p>
 	
+	
 	<!-- 
 	Lists in HTML 
 	--------------
 	1. Unoredered List
 	2. Ordered List
 	3. Definition List
+	list = ['inline', 'embedded', 'external']
 	-->
 	<ol type="I">
 		<li>HTML</li>
@@ -62,6 +66,15 @@
 		</li>
 		<li>JavaScript</li>
 	</ol>
+	
+	<dl>
+		<dt>HTML</dt>
+		<dd>A tag based based language to create web pages.</dd>
+		
+		<dt>CSS</dt>
+		<dd>A cascading stylesheet to design web pages.</dd>
+	</dl>
+	
 	
 	<!-- 
 	Formatting Tags
@@ -79,6 +92,7 @@
 		</pre>
 	</p>
 	
+	
 	<!-- 
 	Special Characters (Character entities) in HTML
 	------------------------------------------------
@@ -89,6 +103,119 @@
 		&copy; &reg; &dollar; &pound; &amp; &hearts;
 		&clubs; &spades; &diamond; 
 	</p>
+	
+	
+	<!-- Table in HTML -->
+	<table border="1">
+		<thead>
+		<tr>
+			<th colspan="4">Python Django - 9:30 am, Broadway</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Email</th>
+			<th>Mobile</th>
+		</tr>
+		</thead>
+		
+		<tfoot>
+		<tr>
+			<th colspan="4">Details of Students</th>
+		</tr>
+		</tfoot>
+		
+		<tbody>
+		<tr>
+			<td>Bigyan</td>
+			<td>Ktm</td>
+			<td>bigyan@email.com</td>
+			<td>9812345678</td>
+		</tr>
+		<tr>
+			<td>Praeep</td>
+			<td>Lalitpur</td>
+			<td>pradeep@email.com</td>
+			<td>9812345678</td>
+		</tr>
+		<tr>
+			<td>Sajana</td>
+			<td>Lalitpur</td>
+			<td>sajana@email.com</td>
+			<td>9812345678</td>
+		</tr>
+		<tr>
+			<td>Bhoomikshya</td>
+			<td>Kathmandu</td>
+			<td>bhoomi@email.com</td>
+			<td>9812345678</td>
+		</tr>
+		<tr>
+			<td>Bini</td>
+			<td>Banepa</td>
+			<td>bini@email.com</td>
+			<td>9812345678</td>
+		</tr>
+		<tr>
+			<td>Arpana</td>
+			<td>Kathmandu</td>
+			<td>arpana@email.com</td>
+			<td>9812345678</td>
+		</tr>
+		</tbody>
+		
+	</table>
+	
+	<br />
+	
+	<table border="1" width="200">
+		<tr>
+			<td colspan="2">a</td>
+			<td>c</td>
+			<td>d</td>
+		</tr>
+		<tr>
+			<td>a</td>
+			<td>b</td>
+			<td>c</td>
+			<td>d</td>
+		</tr>
+		<tr>
+			<td>a</td>
+			<td>b</td>
+			<td colspan="2" rowspan="2">c</td>
+			
+		</tr>
+		<tr>
+			<td>a</td>
+			<td>b</td>
+		</tr>
+	</table>
+	
+	<!--
+	Multimedia in HTML
+	-------------------
+	1. Image
+		i. bitmap images
+			a) gif - 8bit - 256
+			b) jpg - 24bit -16 millions
+			c) png - 8bit 16bit 24bit lossless-compression
+	2. Audio
+	3. Video
+	-->
+	<img src="mountain.jpg" alt="Mountain Image" height="300"
+		width="500" />
+		
+	<audio controls>
+		<source src="audio.mp3" type="audio/mp3" />
+		<source src="audio.ogg" type="audio/ogg" />
+	</audio>
+	
+	<video controls height="300" width="500">
+		<source src="video.mp4" type="video/mp4" />
+		<source src="video.ogg" type="video/ogg" />
+	</video>
+	
 		
 	</body>
 </html>
