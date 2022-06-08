@@ -7,13 +7,107 @@
 	
 	<body>
 	
+	<!-- Form in HTML -->
+	<form method="post" action="page_location/url" 
+							enctype="multipart/form-data">
+		<p>
+			<label>Name</label>
+			<input type="text" name="fullname" 
+					placeholder="Enter you name" required />
+		</p>
+		<p>
+			<label>Address</label>
+			<input type="text" name="address" value="Kathmandu" />
+		</p>
+		<p>
+			<label>DoB</label>
+			<input type="date" name="dob" max="2006-12-31" />
+		</p>
+		<p>
+			<label>Email</label>
+			<input type="email" name="email" />
+		</p>
+		<p>
+			<label>Web site</label>
+			<input type="url" name="website" />
+		</p>
+		<p>
+			<label>Mobile</label>
+			<input type="number" name="mobile" 
+				max="9899999999" min="9800000000" />
+		</p>
+		<p>
+			<label>Username</label>
+			<input type="text" name="username" maxlength="6" />
+		</p>
+		<p>
+			<label>Password</label>
+			<input type="password" name="password" />
+		</p>
+		<p>
+			<label>Range</label>
+			<input type="range" name="range" max="10" min="-10" />
+		</p>
+		<p>
+			<label>Gender</label>
+			<input type="radio" name="gender" value="Male" id="male" />
+			<label for="male">Male</label>
+			<input type="radio" name="gender" value="Female" id="female" />
+			<label for="female">Female</label>
+			<input type="radio" name="gender" value="Other" id="other" />
+			<label for="other">Other</label>
+		</p>
+		<p>
+			<label>Hobbies</label>
+			<input type="checkbox" name="hob" value="Music" />
+			<label>Music</label>
+			<input type="checkbox" name="hob" value="Travel" />
+			<label>Travel</label>
+			<input type="checkbox" name="hob" value="Other" />
+			<label>Other</label>
+		</p>
+		<p>
+			<label>Country</label>
+			<select name="country" required>
+				<option value="Nepal">Nepal</option>
+				<option value="China">China</option>
+				<option value="India">India</option>
+				<option value="USA">USA</option>
+				<option value="UK">UK</option>
+				<option value="Japan">Japan</option>
+			</select>
+		</P>
+		<p>
+			<label>Image</label>
+			<input type="file" name="image" />
+		</p>
+		<p>
+			<label>Comment</label>
+			<textarea name="comment" rows="10" cols="25"></textarea>
+		</p>
+		<p>
+			<input type="submit" value="Register" name="btnReg" />
+			<input type="button" value="Click" />
+			<input type="reset" value="Reset" />
+		</p>
+		<p>
+			<button type="submit" name="btnReg">Register</button>
+			<button type="button" name="btnReg">
+				<img src="lens.png" alt="lens image" height="20" width="25" />
+			</button>
+			<button type="reset" name="btnReg">Reset</button>
+		</p>
+		
+	</form>
+	
 	<!-- Heading Tags -->
-	<h1>HTML</h1>
+	<h1 id="first" class="my_class">HTML</h1>
+	<h1 id="second">CSS</h1>
 	<h2>HTML</h2>
 	<h3>HTML</h3>
-	<h4>HTML</h4>
+	<h4 class="my_class">HTML</h4>
 	<h5>HTML</h5>
-	<h6>HTML</h6>
+	<h6 class="my_class">HTML</h6>
 	
 	
 	<!-- Paragraph Tag -->
@@ -36,7 +130,7 @@
 		Renaissance. The first line of Lorem Ipsum, 
 		"Lorem ipsum dolor sit amet..", comes from a 
 		line in section 1.10.32.
-		<hr />
+		
 		The standard chunk of Lorem Ipsum used since 
 		the 1500s is reproduced below for those 
 		interested. Sections 1.10.32 and 1.10.33 
@@ -81,15 +175,14 @@
 	----------------
 	b, i, u, strong, em, strike, del, sup, sub, pre
 	-->
+	
 	<p>
-		<pre>
 		Contrary to popular belief, 
 		<strike>Lorem Ipsum</strike> is not 
 		simply random text. 
 		<br />
 		H<sub>2</sub>O
 		X<sup>2</sup>+Y<sup>2</sup>
-		</pre>
 	</p>
 	
 	
@@ -107,6 +200,7 @@
 	
 	<!-- Table in HTML -->
 	<table border="1">
+		<caption>Table Caption</caption>
 		<thead>
 		<tr>
 			<th colspan="4">Python Django - 9:30 am, Broadway</th>
