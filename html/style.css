@@ -1,0 +1,26 @@
+/* Text/Font Properties */
+h1
+{
+	font-family: "Monotype corsiva";
+	text-align: center;
+	text-decoration: underline; /*line-through*/
+	text-transform: capitalize; /* uppercase, lowercase */
+	text-shadow: black 13px 13px 13px;
+	/* color x-axis-distance y-axis-distance blur-radius */
+}
+
+p
+{
+	color: red !important;
+	font-size: 22px;
+	font-family: Arial;
+	text-align: justify;
+	font-weight: bold; /* 100 - 800 */
+	font-style: italic;
+	text-indent: 50px;
+	letter-spacing: 10px;
+	word-spacing: 20px;
+	line-height: 30px;
+}
+
+
