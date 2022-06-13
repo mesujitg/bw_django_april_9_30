@@ -1,0 +1,88 @@
+#main
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#header
+{
+	background-color: blue;
+	height: 100px;
+	width: 1200px;
+	float: left;
+}
+#header1
+{
+	background-color: orange;
+	height: 100px;
+	width: 800px;
+	float: left;
+}
+#header1 img
+{
+	height: 80px;
+	width: 80px;
+	border-radius: 40px;
+	margin: 10px;
+	float: left;
+}
+#header h1
+{
+	float: left;
+	font-size: 40px;
+	margin: 30px auto;
+}
+
+#header2
+{
+	background-color: pink;
+	height: 100px;
+	width: 400px;
+	float: left;
+}
+
+#nav
+{
+	background-color: darkblue;
+	height: 50px;
+	width: 1200px;
+	float: left;
+}
+
+#slider
+{
+	background-color: grey;
+	height: 400px;
+	width: 1200px;
+	float: left;
+}
+
+#display
+{
+	background-color: black;
+	height: 400px;
+	width: 1200px;
+	float: left;
+}
+#display1
+{
+	background-color: pink;
+	height: 400px;
+	width: 600px;
+	float: left;
+}
+#display2
+{
+	background-color: aqua;
+	height: 400px;
+	width: 600px;
+	float: left;
+}
+
+#footer
+{
+	background-color: blue;
+	height: 30px;
+	width: 1200px;
+	float: left;
+}
