@@ -1,3 +1,9 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
 #main
 {
 	width: 1200px;
@@ -6,14 +12,13 @@
 
 #header
 {
-	background-color: blue;
+	background-color: #eeeeee;
 	height: 100px;
 	width: 1200px;
 	float: left;
 }
 #header1
 {
-	background-color: orange;
 	height: 100px;
 	width: 800px;
 	float: left;
@@ -35,18 +40,64 @@
 
 #header2
 {
-	background-color: pink;
 	height: 100px;
 	width: 400px;
 	float: left;
+}
+#header2 img
+{
+	height: 30px;
+	width: 30px;
+}
+#header2 h3, #header2 p
+{
+	margin: 10px 20px;
+}
+#header2 a
+{
+	margin: 5px;
+	text-decoration: none;
 }
 
 #nav
 {
 	background-color: darkblue;
-	height: 50px;
 	width: 1200px;
 	float: left;
+}
+
+#nav ul
+{
+	list-style: none;
+}
+#nav ul li
+{
+	float: left;
+	padding: 10px 40px;
+	border-right: 2px solid #ffffff;
+}
+#nav ul li a
+{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+#nav ul li ul
+{
+	position: absolute;
+	background-color: darkblue;
+	margin-left: -40px;
+	display: none;
+}
+#nav ul li ul li
+{
+	float: none;
+	border: none;
+}
+#nav ul li:hover ul
+{
+	display: block;
 }
 
 #slider
@@ -55,6 +106,11 @@
 	height: 400px;
 	width: 1200px;
 	float: left;
+}
+#slider img
+{
+	width: 1200px;
+	height: 400px;
 }
 
 #display
@@ -82,7 +138,12 @@
 #footer
 {
 	background-color: blue;
-	height: 30px;
 	width: 1200px;
 	float: left;
+}
+#footer p
+{
+	color: #fff;
+	text-align: center;
+	margin: 10px auto;
 }
