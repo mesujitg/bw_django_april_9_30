@@ -6,21 +6,21 @@
 
 #main
 {
-	width: 1200px;
+	width: 80%;
 	margin: 0 auto;
 }
 
 #header
 {
 	background-color: #eeeeee;
-	height: 100px;
-	width: 1200px;
+	min-height: 100px;
+	width: 100%;
 	float: left;
 }
 #header1
 {
 	height: 100px;
-	width: 800px;
+	width: 70%;
 	float: left;
 }
 #header1 img
@@ -41,7 +41,7 @@
 #header2
 {
 	height: 100px;
-	width: 400px;
+	width: 30%;
 	float: left;
 }
 #header2 img
@@ -62,7 +62,7 @@
 #nav
 {
 	background-color: darkblue;
-	width: 1200px;
+	width: 100%;
 	float: left;
 }
 
@@ -73,7 +73,7 @@
 #nav ul li
 {
 	float: left;
-	padding: 10px 40px;
+	padding: 10px 25px;
 	border-right: 2px solid #ffffff;
 }
 #nav ul li a
@@ -104,41 +104,40 @@
 {
 	background-color: grey;
 	height: 400px;
-	width: 1200px;
+	width: 100%;
 	float: left;
 }
 #slider img
 {
-	width: 1200px;
+	width: 100%;
 	height: 400px;
 }
 
 #display
 {
 	background-color: black;
-	height: 400px;
-	width: 1200px;
+	width: 100%;
 	float: left;
 }
 #display1
 {
 	background-color: pink;
 	height: 400px;
-	width: 600px;
+	width: 50%;
 	float: left;
 }
 #display2
 {
 	background-color: aqua;
 	height: 400px;
-	width: 600px;
+	width: 50%;
 	float: left;
 }
 
 #footer
 {
 	background-color: blue;
-	width: 1200px;
+	width: 100%;
 	float: left;
 }
 #footer p
@@ -146,4 +145,36 @@
 	color: #fff;
 	text-align: center;
 	margin: 10px auto;
+}
+
+
+
+@media screen and (max-width: 768px)
+{
+	#main
+	{
+		width: 100%;
+	}
+	#header h1
+	{
+		font-size: 26px;
+	}
+	#header1, #header2, #display1, #display2
+	{
+		width: 100%;
+	}
+	#nav ul li
+	{
+		float: none;
+	}
+}
+
+
+@media screen and (max-width: 862px)
+{
+	#header2 img
+	{
+		width: 20px;
+		height: 20px;
+	}
 }
