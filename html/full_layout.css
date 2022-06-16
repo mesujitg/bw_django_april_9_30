@@ -10,6 +10,13 @@
 	margin: 0 auto;
 }
 
+#header-nav
+{
+	position:fixed;
+	top: 0;
+	width: 80%;
+}
+
 #header
 {
 	background-color: #eeeeee;
@@ -72,7 +79,7 @@
 }
 #nav ul li
 {
-	float: left;
+	display: inline-block;
 	padding: 10px 25px;
 	border-right: 2px solid #ffffff;
 }
@@ -92,6 +99,7 @@
 }
 #nav ul li ul li
 {
+	display: block;
 	float: none;
 	border: none;
 }
@@ -103,14 +111,24 @@
 #slider
 {
 	background-color: grey;
-	height: 400px;
+	height: 1200px;
 	width: 100%;
 	float: left;
 }
 #slider img
 {
 	width: 100%;
-	height: 400px;
+	height: 1200px;
+}
+#slider h1
+{
+	position: sticky; 
+	/* absolute/relative/fixed/sticky/static */
+	top: 0;
+	left: 200px;
+	color: red;
+	display: inline;
+	/* none/block/inline/inline-block/flex/grid */
 }
 
 #display
@@ -118,20 +136,19 @@
 	background-color: black;
 	width: 100%;
 	float: left;
+	display: flex;
 }
 #display1
 {
 	background-color: pink;
-	height: 400px;
+	height: 800px;
 	width: 50%;
-	float: left;
 }
 #display2
 {
 	background-color: aqua;
-	height: 400px;
+	height: 800px;
 	width: 50%;
-	float: left;
 }
 
 #footer
@@ -165,7 +182,11 @@
 	}
 	#nav ul li
 	{
-		float: none;
+		display: block;
+	}
+	#display
+	{
+		display: block;
 	}
 }
 
@@ -178,3 +199,10 @@
 		height: 20px;
 	}
 }
+
+
+/*
+transform
+transition
+animation
+*/
