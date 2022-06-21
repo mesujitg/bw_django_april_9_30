@@ -1,0 +1,26 @@
+header
+{
+	background: #eeeeee;
+	height: 100px;
+}
+nav
+{
+	background: darkblue;
+}
+#slider
+{
+	background: grey;
+	height: 400px;
+}
+#display
+{
+	background: orange;
+	height: 400px;
+}
+footer
+{
+	background: darkblue;
+	height: 30px;
+}
+
+

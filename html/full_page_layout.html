@@ -12,7 +12,7 @@
 			<div id="header">
 				<div id="header1">
 					<img src="river.jpg" alt="Company Logo" />
-					<h1>Company Pvt. Ltd.</h1>
+					<h1 id="title" onclick="myFunction()">Company Pvt. Ltd.</h1>
 				</div>
 				<div id="header2">
 					<h3>Follow Us: </h3>
@@ -33,6 +33,41 @@
 				</div>
 				
 				<script>
+					/*
+					JS can chnage:
+					1. content
+					2. attribute
+					3. style
+					4. DOM
+					of a HTML documents in user events.
+					
+					Selectors
+					----------
+					Events
+					------
+					onmouseover onmouseout onclick ondblclick
+					onkeyup onkeydown
+					onfocus onfocusout onchange onchecked onselect  
+					*/
+					function myFunction()
+					{
+						element = document.getElementById('title');
+						
+						element.innerHTML = 'My Company';
+						
+						element.align = 'center';
+						var a = element.align;
+						element.setAttribute('class', 'test-class');
+						var b = element.getAttribute('id');
+						
+						element.style.color = 'blue';
+						element.style.fontFamily = 'monotype corsiva';
+						
+						element.innerHTML = 'My Company <u>Pvt. Ltd.</u>';
+					}
+				
+				
+					/*
 					a = 'ram';
 					b = 10;
 					c = 10.5;
@@ -46,6 +81,7 @@
 					}
 					
 					alert(student.name);
+					*/
 					
 				</script>
 				
@@ -85,8 +121,30 @@
 			</div>
 			
 			<div id="footer">
-				<p>Copyright reserved &copy; 2022. Company Pvt. Ltd.
+				<p>Copyright reserved &copy; 2022. Company Pvt. Ltd.</p>
+				<form>
+					<input type="email" placeholder="Email" name="email" id="email" />
+					<input type="submit" value="Subscribe" name="btnSubs" 
+						onclick="return confirm('Are you sure?')" />
+				</form>
+				
+				<script>
+				
+					function checkForm()
+					{
+						var email = document.getElementById('email').value;
+						
+						if(email == '') {
+							alert('Please enter Email');
+							return false;
+						}
+						return true;
+					}
+					
+				</script>
+				
 			</div>
+		
 		</div>
 		
 	</body>
