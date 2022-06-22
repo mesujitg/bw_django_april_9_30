@@ -104,7 +104,7 @@
 	float: none;
 	border: none;
 }
-#nav ul li:hover ul
+#nav ul li:hover > ul
 {
 	display: block;
 }
@@ -226,3 +226,18 @@ transform
 transition
 animation
 */
+
+#display1 h1 + h1
+{
+	color: red;
+}
+
+#display1 div p:nth-child(3)
+{
+	color: blue;
+}
+
+#display1 h1::first-letter
+{
+	font-size: 48px;
+}

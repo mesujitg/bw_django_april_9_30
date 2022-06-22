@@ -4,6 +4,7 @@
 		<title>Welcome</title>
 		<meta charset="utf-8" />
 		<link href="full_layout.css" rel="stylesheet" media="" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	</head>
 	
 	<body>
@@ -12,7 +13,22 @@
 			<div id="header">
 				<div id="header1">
 					<img src="river.jpg" alt="Company Logo" />
-					<h1 id="title" onclick="myFunction()">Company Pvt. Ltd.</h1>
+					<h1 id="title" onclick="myFunction()" 
+					>
+					Company Pvt. Ltd.
+					</h1>
+					
+					<script>
+						//$('#title').hide(3000);
+						//$('#title').show(3000);
+						//$('#title').fadeOut(3000);
+						//$('#title').fadeIn(3000);
+						//$('#title').slideUp(3000);
+						//$('#title').slideDown(3000);
+						//$('#title').animate({'margin-left': '200px'}, 3000);
+						$('#title').animate({'margin-left': '200px','margin-top': '200px'}, 3000);
+					</script>
+					
 				</div>
 				<div id="header2">
 					<h3>Follow Us: </h3>
@@ -43,6 +59,7 @@
 					
 					Selectors
 					----------
+					
 					Events
 					------
 					onmouseover onmouseout onclick ondblclick
@@ -93,7 +110,13 @@
 					<li><a href="#">About &dtrif;</a>
 						<ul>
 							<li><a href="#">Introduction</a></li>
-							<li><a href="#">Achievements</a></li>
+							<li><a href="#">Achievements</a>
+								<ul>
+									<li><a href="#">Introduction</a></li>
+									<li><a href="#">Achievements</a></li>
+									<li><a href="#">Mission &amp; Goals</a></li>
+								</ul>
+							</li>
 							<li><a href="#">Mission &amp; Goals</a></li>
 						</ul>
 					</li>
@@ -116,7 +139,22 @@
 			</div>
 			
 			<div id="display">
-				<div id="display1"></div>
+				<div id="display1">
+					<div>
+						<p>paraghraph</p>
+						<p>paraghraph</p>
+						<p>paraghraph</p>
+					</div>
+					<div>
+						<p>paraghraph</p>
+						<p>paraghraph</p>
+						<p>paraghraph</p>
+					</div>
+					<h1>Heading1</h1>
+					<h1>Heading2</h1>
+					<p>paraghraph</p>
+					<p>paraghraph</p>
+				</div>
 				<div id="display2"></div>
 			</div>
 			
@@ -125,8 +163,23 @@
 				<form>
 					<input type="email" placeholder="Email" name="email" id="email" />
 					<input type="submit" value="Subscribe" name="btnSubs" 
-						onclick="return confirm('Are you sure?')" />
+						 id="btn" />
 				</form>
+				
+				<script>
+				//innerHTML ~ html('content goes here...')
+					$(document).ready(function(){
+						$('#btn').click(function(){
+							var email = $('#email').val();
+						
+							if(email == '') {
+								alert('Please enter Email Jquery');
+								return false;
+							}
+							return true;
+						});
+					});
+				</script>
 				
 				<script>
 				
