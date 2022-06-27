@@ -2,11 +2,14 @@ Job Portal
 -----------
 Organization
     name
+    estd
     address
     category
     email
     phone
     details
+    status
+    logo
 
 Job
     title
@@ -22,6 +25,7 @@ Job
     salary
     deadline
     organization
+    status
 
 User
     name
@@ -31,6 +35,7 @@ User
     username
     password
     type(admin, recruiter, staff, jobseeker)
+    status
 
 JobSeeker
     objective
@@ -40,12 +45,17 @@ JobSeeker
     experience
     cv
     image
+    status
 
 Application
     apply_date
     user_id
     job_id
     status(applied, under review, selected, rejected, waiting)
+
+Information
+    title, details, status
+
 
 
 E-Commerce
@@ -62,9 +72,13 @@ Order
 Hotel Booking System
 ---------------------
 User
+    name, address, identity, mobile, username, password, type
 Hotel
+    name, address, phone, email, website, location
 Room
+    hotel_id, room_no, type, capacity, features, details, rate
 Booking
+    user_id, room_id, booking_date, for_date, duration, no_of_people, rate
 
 
 Movie Ticket Booking System
@@ -81,7 +95,12 @@ Clinic Management System
 -------------------------
 User
 Patient
+    name, address, mobile, gender, age, weight, patient_no
 Doctor
-Report
+    name, address, specialization, mobile, email, consult_charge
+Report/Checkup
+    doctor_id, patient_id, type, rate, date, time, symptoms, diagnosis,
+    test_referred, conclusion, medicine, report
 Test
+    checkup_id, title, rate, date, time, report
 
