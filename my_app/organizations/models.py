@@ -16,5 +16,5 @@ class Organization(models.Model):
     phone = models.CharField(max_length=255)
     details = models.TextField()
     status = models.BooleanField(default=True)
-    logo = models.ImageField()
+    logo = models.ImageField(upload_to='organizations')
 
