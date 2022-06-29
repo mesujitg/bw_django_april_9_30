@@ -1,3 +1,9 @@
 from django.contrib import admin
+from jobseekers.models import JobSeeker
 
-# Register your models here.
+
+class JSAdmin(admin.ModelAdmin):
+    list_display = ('user', 'objective', 'qualification', 'status')
+
+
+admin.site.register(JobSeeker, JSAdmin)

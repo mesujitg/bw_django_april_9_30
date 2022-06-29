@@ -12,3 +12,6 @@ class JobSeeker(models.Model):
     cv = models.FileField(upload_to='cvs')
     image = models.ImageField(upload_to='jobseekers')
     status = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.user

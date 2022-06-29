@@ -15,3 +15,5 @@ class Application(models.Model):
                                        ('rejected', 'rejected'),
                                        ('waiting', 'waiting')])
 
+    def __str__(self):
+        return f'{ self.user_id } - { self.job_id }'

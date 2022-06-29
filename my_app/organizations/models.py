@@ -6,6 +6,9 @@ class Category(models.Model):
     details = models.TextField()
     status = models.BooleanField(default=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Organization(models.Model):
     name = models.CharField(max_length=255)
@@ -18,3 +21,5 @@ class Organization(models.Model):
     status = models.BooleanField(default=True)
     logo = models.ImageField(upload_to='organizations')
 
+    def __str__(self):
+        return self.name

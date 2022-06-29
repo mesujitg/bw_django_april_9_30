@@ -19,3 +19,6 @@ class Job(models.Model):
     deadline = models.DateField()
     organization = models.ForeignKey(Organization, on_delete=models.CASCADE)
     status = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f'{ self.title } - { self.organization }'
