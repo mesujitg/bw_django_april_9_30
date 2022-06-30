@@ -1,11 +1,11 @@
-from datetime import datetime
+from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import User
 from jobs.models import Job
 
 
 class Application(models.Model):
-    apply_date = models.DateField(default=datetime.now())
+    apply_date = models.DateField(default=timezone.now())
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     job_id = models.ForeignKey(Job, on_delete=models.CASCADE)
     status = models.CharField(max_length=255,

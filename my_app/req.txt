@@ -54,7 +54,7 @@ Application
     status(applied, under review, selected, rejected, waiting)
 
 Information
-    title, details, status
+    section, title, details, status
 
 
 
