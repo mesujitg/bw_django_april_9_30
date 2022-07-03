@@ -14,4 +14,4 @@ class JobSeeker(models.Model):
     status = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.user
+        return self.user.username

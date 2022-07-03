@@ -11,8 +11,12 @@ def show_home(request):
 
 
 def show_about(request):
-    return HttpResponse('About Page')
+    return render(request, 'about.html')
 
 
 def show_contacts(request):
-    return HttpResponse('Contacts Page')
+    return render(request, 'contact.html')
+
+
+def show_policies(request):
+    return render(request, 'policy.html')

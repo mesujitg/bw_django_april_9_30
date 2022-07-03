@@ -8,4 +8,7 @@ urlpatterns = [
 
     # 127.0.0.1:8000/info/contacts
     path('contacts', views.show_contacts),
+
+    # 127.0.0.1:8000/info/policies
+    path('policies', views.show_policies),
 ]
