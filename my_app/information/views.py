@@ -1,3 +1,4 @@
+from django.db import connection
 from django.http import HttpResponse
 from django.shortcuts import render
 from jobs.models import Job
@@ -5,9 +6,13 @@ from organizations.models import Category
 
 
 def show_home(request):
-    categories = Category.objects.all()
     jobs = Job.objects.all()
-    return render(request, 'index.html', {'categories': categories, 'jobs': jobs})
+
+    cursor = connection.cursor()
+    cursor.execute('SELECT category_id, count(*) FROM jobs_job GROUP BY category_id')
+    counts = cursor.fetchall()
+    
+    return render(request, 'index.html', {'jobs': jobs, 'counts': counts})
 
 
 def show_about(request):

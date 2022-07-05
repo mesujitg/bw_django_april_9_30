@@ -95,12 +95,20 @@
             </div>
         </div>
         <div class="row">
-
+            <!--            [(2,2), (3,1), (4,1), (5,1)]-->
             {% for c in categories %}
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
                     <a href="jobs.html"><h4>{{ c.title }}</h4></a>
-                    <p><span>50</span> Available position</p>
+                    <p>
+                        <span>0
+                        {% for ct in counts %}
+                            {% if ct.0 == c.id %}
+                                {{ ct.1 }}
+                            {% endif %}
+                        {% endfor %}
+                        </span>
+                        Available position</p>
                 </div>
             </div>
             {% endfor %}

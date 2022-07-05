@@ -14,8 +14,9 @@ def show_single_job(request, id):
     return render(request, 'job_details.html', {'job': job})
 
 
-def show_job_by_category(request):
-    return render(request, 'jobs.html')
+def show_job_by_category(request, cid):
+    jobs = Job.objects.filter(category_id=cid)
+    return render(request, 'jobs.html', {'jobs': jobs})
 
 
 def show_searched_jobs(request):
