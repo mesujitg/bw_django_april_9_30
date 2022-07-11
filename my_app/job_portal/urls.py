@@ -21,11 +21,13 @@ from information import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ckuploads/', include('ckeditor_uploader.urls')),
 
     path('', views.show_home, name='home'),
 
     path('info/', include('information.urls')),
     path('jobs/', include('jobs.urls')),
+    path('accounts/', include('accounts.urls')),
     # path('organizations/', include('organizations.urls')),
     # path('jobseekers/', include('jobseekers.urls')),
     # path('applications/', include('applications.urls')),
