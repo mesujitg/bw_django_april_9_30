@@ -1,7 +1,6 @@
 from django.db import connection
 from django.http import HttpResponse
 from django.shortcuts import render
-
 from information.models import Information
 from jobs.models import Job
 from organizations.models import Category
@@ -18,7 +17,8 @@ def show_home(request):
 
 
 def show_about(request):
-    about = Information.objects.filter(section_id=1)
+    # about = Information.objects.filter(section_id=1)
+    about = Information.objects.filter(section__title='About')
     return render(request, 'about.html', {'about': about})
 
 
