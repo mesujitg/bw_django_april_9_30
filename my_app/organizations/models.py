@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from accounts.models import User
 
 
 class Category(models.Model):
@@ -25,3 +27,7 @@ class Organization(models.Model):
         return self.name
 
 
+class OrgUser(models.Model):
+    org = models.ForeignKey(Organization, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField(default=timezone.now())

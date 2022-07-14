@@ -1,8 +1,10 @@
-from django.contrib import auth
+from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+from accounts.models import User
 from jobseekers.models import JobSeeker
 
 
@@ -33,9 +35,17 @@ def register_user(request):
                        experience='', cv=cv, image=image)
         js.save()
 
-        return HttpResponse('Ok')
+        # org = Organization()
+        # org.save()
 
-    return HttpResponse('Invalid Access')
+        # orgusr = OrgUser(org=org, user=user)
+        # orgusr.save()
+
+        messages.success(request, 'User Registered Successfully')
+        return redirect('login')
+
+    messages.error(request, 'Invalid Access')
+    return redirect('register')
 
 
 def user_login(request):
@@ -47,13 +57,29 @@ def user_login(request):
 
         if user is not None:
             auth.login(request, user)
+            messages.success(request, 'you are logged in')
             return redirect('home')
         else:
-            return HttpResponse('Wrong credentials!')
+            messages.error(request, 'Wrong credentials!')
+            return redirect('login')
 
-    return HttpResponse('Invalid access!')
+    messages.error(request, 'Invalid Access')
+    return redirect('login')
 
 
 def logout(request):
     auth.logout(request)
     return redirect('home')
+
+
+@login_required
+def profile(request):
+    # if request.user.is_authenticated:
+    #     jobseeker = JobSeeker.objects.get(user=request.user)
+    #     return render(request, 'profile.html', {'js': jobseeker})
+    #
+    # messages.error(request, 'Invalid Access! You must Login First')
+    # return redirect('login')
+
+    jobseeker = JobSeeker.objects.get(user=request.user)
+    return render(request, 'profile.html', {'js': jobseeker})
