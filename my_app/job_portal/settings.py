@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'organizations',
 
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'import_export'
 ]
 
 MIDDLEWARE = [

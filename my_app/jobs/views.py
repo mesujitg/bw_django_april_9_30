@@ -20,4 +20,7 @@ def show_job_by_category(request, cid):
 
 
 def show_searched_jobs(request):
-    return render(request, 'jobs.html')
+    key = request.GET['key']
+    add = request.GET['address']
+    jobs = Job.objects.filter(title__icontains=key).filter(organization__address__icontains=add)
+    return render(request, 'jobs.html', {'jobs': jobs})

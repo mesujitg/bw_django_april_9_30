@@ -80,6 +80,69 @@ def profile(request):
     #
     # messages.error(request, 'Invalid Access! You must Login First')
     # return redirect('login')
+    if request.method == 'POST':
+        fn = request.POST['fname']
+        ln = request.POST['lname']
+        em = request.POST['email']
+        un = request.POST['username']
+        pw = request.POST['password']
+
+        obj = request.POST['objective']
+        # cv = request.FILES['cv']
+        # image = request.FILES['image']
+
+        user = request.user
+        user.first_name = fn
+        user.last_name = ln
+        user.email = em
+        if user.password != pw:
+            user.password = make_password(pw)
+        user.save()
+
+        jobseeker = JobSeeker.objects.get(user=request.user)
+        jobseeker.objective = obj
+        # jobseeker.experience = ''
+        # jobseeker.qualification = ''
+        jobseeker.save()
+
+    if request.user.is_staff:
+        messages.warning(request, 'This page is not applicable for your role!')
+        return redirect('home')
+    elif request.user.role == 'Employee':
+        jobseeker = JobSeeker.objects.get(user=request.user)
+        return render(request, 'profile.html', {'js': jobseeker})
+    elif request.user.role == 'Employer':
+        pass
+    else:
+        messages.warning(request, 'This page is not applicable for your role!')
+        return redirect('home')
+
+
+def update_profile(request):
+    fn = request.POST['fname']
+    ln = request.POST['lname']
+    em = request.POST['email']
+    un = request.POST['username']
+    pw = request.POST['password']
+
+    obj = request.POST['objective']
+    # cv = request.FILES['cv']
+    # image = request.FILES['image']
+
+    user = request.user
+    user.first_name = fn
+    user.last_name = ln
+    user.email = em
+    if user.password != pw:
+        user.password = make_password(pw)
+    user.save()
 
     jobseeker = JobSeeker.objects.get(user=request.user)
-    return render(request, 'profile.html', {'js': jobseeker})
+    jobseeker.objective = obj
+    # jobseeker.experience = ''
+    # jobseeker.qualification = ''
+    jobseeker.save()
+
+
+
+

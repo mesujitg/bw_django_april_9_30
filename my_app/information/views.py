@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from information.models import Information
 from jobs.models import Job
-from organizations.models import Category
+from organizations.models import Category, Organization
 
 
 def show_home(request):
@@ -12,8 +12,10 @@ def show_home(request):
     cursor = connection.cursor()
     cursor.execute('SELECT category_id, count(*) FROM jobs_job GROUP BY category_id')
     counts = cursor.fetchall()
+
+    organizations = Organization.objects.all()
     
-    return render(request, 'index.html', {'jobs': jobs, 'counts': counts})
+    return render(request, 'index.html', {'jobs': jobs, 'counts': counts, 'organizations': organizations})
 
 
 def show_about(request):
